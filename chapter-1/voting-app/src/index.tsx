@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import ProductList from './components/ProductList'
+import ProductList from './components/ProductList/ProductList'
 
 ReactDOM.render(
     <ProductList />,

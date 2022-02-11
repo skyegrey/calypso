@@ -5,13 +5,13 @@ export const generateVoteCount = () => {
 export const Seed: {
     products: (
         {
-            productImageUrl: string;
-            submitterAvatarUrl: string;
-            description: string;
-            votes: number;
             id: number;
             title: string;
+            description: string;
             url: string
+            votes: number;
+            submitterAvatarUrl: string;
+            imageName: string;
         }
     )[]
     } = {
@@ -22,8 +22,8 @@ export const Seed: {
             description: 'Authentic renaissance actors, delivered in just two weeks',
             url: '#',
             votes: generateVoteCount(),
-            submitterAvatarUrl: 'images/avatars/daniel.jpg',
-            productImageUrl: 'images/products/fort-knight.jpg'
+            submitterAvatarUrl: 'daniel.jpg',
+            imageName: 'fort-knight.jpg'
         },
         {
             id: 1,
@@ -31,8 +31,8 @@ export const Seed: {
             description: 'On-demand sand castle construction expertise.',
             url: '#',
             votes: generateVoteCount(),
-            submitterAvatarUrl: 'images/avatars/daniel.jpg',
-            productImageUrl: 'images/products/yellow-pail.jpg'
+            submitterAvatarUrl: 'daniel.jpg',
+            imageName: 'yellow-pail.jpg'
         }
     ],
 }
