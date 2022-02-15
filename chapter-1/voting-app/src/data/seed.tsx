@@ -31,7 +31,7 @@ export const Seed: {
             description: 'On-demand sand castle construction expertise.',
             url: '#',
             votes: generateVoteCount(),
-            submitterAvatarUrl: 'daniel.jpg',
+            submitterAvatarUrl: 'kevin.jpg',
             imageName: 'yellow-pail.jpg'
         }
     ],
