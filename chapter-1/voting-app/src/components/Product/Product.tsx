@@ -6,9 +6,14 @@ interface ProductProps {
     votes: number;
     submitterAvatarUrl: string;
     imageName: string;
+    onUpVote: (productId: number) => void;
 }
 
 const Product = (props:ProductProps) => {
+
+    const handleUpVoteClicked = () => {
+        props.onUpVote(props.id)
+    }
 
     return (
         <div className='item'>
@@ -17,7 +22,7 @@ const Product = (props:ProductProps) => {
             </div>
             <div className='middle aligned content'>
                 <div className='header'>
-                    <a>
+                    <a onClick={handleUpVoteClicked}>
                         <i className={'large caret up icon'} />
                     </a>
                     {props.votes}

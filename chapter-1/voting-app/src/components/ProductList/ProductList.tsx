@@ -2,6 +2,11 @@ import Product from "../Product/Product";
 import {Seed} from "../../data/seed"
 
 const ProductList = () => {
+
+    const handleProductUpVote = (productId: number) => {
+        console.log(productId + ' was up-voted.');
+    }
+
     const sortedProducts = Seed.products.sort((a, b) => (
        b.votes - a.votes
     ));
@@ -13,7 +18,9 @@ const ProductList = () => {
             url={product.url}
             votes={product.votes}
             submitterAvatarUrl={product.submitterAvatarUrl}
-            imageName={product.imageName} />
+            imageName={product.imageName}
+            onUpVote={handleProductUpVote}
+        />
     ))
 
     return (
