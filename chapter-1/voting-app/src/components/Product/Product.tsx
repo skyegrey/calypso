@@ -9,7 +9,7 @@ interface ProductProps {
     onUpVote: (productId: number) => void;
 }
 
-const Product = (props:ProductProps) => {
+const Product = (props: ProductProps) => {
 
     const handleUpVoteClicked = () => {
         props.onUpVote(props.id)
