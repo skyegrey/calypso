@@ -18,7 +18,16 @@ const ProductList = () => {
     const [products, setProducts] = useState([] as product[])
 
     const handleProductUpVote = (productId: number) => {
-        console.log(productId + ' was up-voted.');
+        const nextProducts = products.map((product) => {
+            if (product.id === productId) {
+                return Object.assign({}, product, {
+                    votes: product.votes + 1,
+                });
+            } else {
+                return product;
+            }
+        })
+        setProducts(nextProducts)
     }
 
     const sortedProducts = products.sort((a, b) => (
